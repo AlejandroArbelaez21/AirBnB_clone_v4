@@ -154,6 +154,8 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
+Alejandro Arbelaez - [GitHub](https://github.com/AlejandroArbelaez21)
+Juan Sebastián Ocampo Hoyos - [GitHub](https://github.com/darkares23) / [Twitter](https://twitter.com/juaocadev)
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
