@@ -1,7 +1,7 @@
 $(() => {
   $.get('http://0.0.0.0:5001/api/v1/status/', (res) => {
     if (res.status === 'OK') {
-      $('header#api_status').addClass('available');
+      $('header #api_status').addClass('available');
     }
   });
   const listId = {};
