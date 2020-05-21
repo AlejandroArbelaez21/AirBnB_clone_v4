@@ -1,16 +1,15 @@
 $(() => {
-    const listId = {};
-    $('.amenities .popover li input').change(function () {
-      if ($(this).is(':checked')) {
-        listId[$(this).attr('data_id')] = $(this).attr('data-name');
-        let listH = Object.values(listId)
-        listH = listH.join(', ')
-        console.log(listId[0]);
-        $('.amenities h4').html(listH);
-      } else {
-        delete listId[this.dataset.id];
-      }
-    });
+  const listId = {};
+  let lish = [];
+  $('.amenities .popover li input').change(function () {
+    if ($(this).is(':checked')) {
+      lish.push($(this).attr('data-name'));
+      listId[$(this).attr('data_id')] = $(this).attr('data-name');
+    } else {
+      delete listId[$(this).attr('data_id')];
+    }
+    $('div.amenities h4').html(Object.values(listId).join(', ') || '&nbsp;');
+  });
   amenityIds = [];
   $.get('http://0.0.0.0:5001/api/v1/status/', (res) => {
     if (res.status === 'OK') {
