@@ -1,12 +1,13 @@
 $(() => {
-    const listId = {};
-    $('.amenities .popover li input').change(function (event) {
-      if (this.checked) {
-        listId[this.dataset.id] = this.dataset.name;
-      } else {
-        delete listId[this.dataset.id];
-      }
-      const listval = Object.values(listId);
-      $('.amenities h4').text(listval.join(', '));
-    });
+  const listId = {};
+  let lish = [];
+  $('.amenities .popover li input').change(function () {
+    if ($(this).is(':checked')) {
+      lish.push($(this).attr('data-name'));
+      listId[$(this).attr('data_id')] = $(this).attr('data-name');
+    } else {
+      delete listId[$(this).attr('data_id')];
+    }
+    $('div.amenities h4').html(Object.values(listId).join(', ') || '&nbsp;');
   });
+});
